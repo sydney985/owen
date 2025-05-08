@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jamesville Family of Adukrom Akuapem</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #34495e;
+            padding: 10px 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background-color: #2c3e50;
+        }
+        
+        main {
+            padding: 30px 0;
+            min-height: 70vh;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+        
+        h1, h2, h3 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .page {
+            display: none;
+        }
+        
+        .active {
+            display: block;
+        }
+        
+        /* Home Page Styles */
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('family-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .hero h1 {
+            color: white;
+            font-size: 2.5rem;
+        }
+        
+        /* Profile Page Styles */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .profile-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .profile-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        
+        /* Memorial Page Styles */
+        .memorial-item {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        /* Gallery Styles */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Map Styles */
+        #family-map {
+            height: 400px;
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        /* Form Styles */
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        button {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #34495e;
+        }
+        
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+
+
+    
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], 
+        input[type="email"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+
+
+    
+        .video-container {
+            width: 80%;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        video {
+            width: 100%;
+            display: block;
+        }
+
+
+
+
+
+        h1, h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .committee-section {
+            margin-bottom: 40px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e3f2fd;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+        .note {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .position {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        
+
+
+
+
+    
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e3f2fd;
+        }
+        .container1 {
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+        .note {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 20px;
+        }
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 5px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Jamesville Family of Adukrom Akuapem</h1>
+            <p>Preserving our heritage, building our future</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('profiles')">Personality Profiles</a></li>
+                <li><a href="#" onclick="showPage('memorial')">Memorial</a></li>
+                <li><a href="#" onclick="showPage('gallery')">Gallery</a></li>
+                <li><a href="#" onclick="showPage('map')">Family Map</a></li>
+                <li><a href="#" onclick="showPage('networking')">Networking</a></li>
+                <li><a href="#" onclick="showPage('business')">Business</a></li>
+                <li><a href="#" onclick="showPage('elders')">Council of Elders</a></li>
+                <li><a href="#" onclick="showPage('management')">Management</a></li>
+                <li><a href="#" onclick="showPage('programs')">Programs</a></li>
+                <li><a href="#" onclick="showPage('donation')">Donations</a></li>
+                <li><a href="#" onclick="showPage('signup')">Sign Up</a></li>
+                <li><a href="#" onclick="showPage('building')">Building Project</a></li>
+                <li><a href="#" onclick="showPage('documentary')">Documentary</a></li>
+                <li><a href="#" onclick="showPage('dues')">Dues Calculator</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="container">
+        <!-- Home Page -->
+        <div id="home" class="page active" >
+            <div class="hero" style="background-image: url(bg.jpeg); width: 100%;">
+                <h1>Welcome to Our Family Website</h1>
+            </div>
+            
+            <h2>About Our Family</h2>
+            <p>The Jamesville Family of Adukrom Akuapem is a proud lineage with deep roots in Ghanaian culture and tradition. Our family has contributed significantly to the development of our community and continues to uphold the values passed down through generations.
+                We are spread accross all the Regions of Ghana in different continents in the Wolrd. You are welcome to share your pictures and stories to this platform. Our aim is to connect all the decendants of Opanyin James Kwadjo Larbi of Adukrom. 
+            </p>
+            
+            <h2>Recent Updates</h2>
+            <div class="updates">
+                <div class="update-item">
+                    <h3>Upcoming Get to gather </h3>
+                    <p>Join us for our annual family get to gather on December 2025 at the Jamesville Family house.</p>
+                </div>
+                
+                <div class="update-item">
+                    <h3>Building Project Progress</h3>
+                    <p>The family building project is now 65% complete. View progress photos on the Building Project page.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Personality Profiles Page -->
+        <div id="profiles" class="page">
+            <h2>Personality Profiles</h2>
+            <p>Meet the distinguished members of our family who have made significant contributions to our community and beyond.</p>
+            
+
+            <h1>Tell Us About Yourself</h1>
+    <form id="aboutForm">
+        <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="1" max="120">
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        
+        <div class="form-group">
+            <label for="occupation">Occupation:</label>
+            <input type="text" id="occupation" name="occupation">
+        </div>
+        
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="">Select your country</option>
+                <option value="usa">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="canada">Canada</option>
+                <option value="australia">Australia</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="interests">Interests/Hobbies:</label>
+            <input type="text" id="interests" name="interests" placeholder="e.g., Reading, Sports, Music">
+        </div>
+        
+        <div class="form-group">
+            <label for="bio">About Yourself:</label>
+            <textarea id="bio" name="bio" placeholder="Tell us more about yourself..."></textarea>
+        </div>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="output" style="margin-top: 30px; display: none;">
+        <h2>Your Information:</h2>
+        <div id="userInfo"></div>
+    </div>
+            <div class="profile-grid">
+                
+                
+               
+            </div>
+        </div>
+        
+        <!-- Memorial Page -->
+        <div id="memorial" class="page" style="background-image: url(dove.jpeg);">
+            <h2>In Loving Memory</h2>
+            <p>We honor and remember our beloved family members who have passed on.</p>
+            <img src="dove.jpeg" alt="" width="100%">
+            
+            <!-- <div class="memorial-item">
+                <h3>Opanin Kwabena James (1925-2010)</h3>
+                <p>Former family head and community leader who served for 30 years.</p>
+                <p>"A man of wisdom and integrity who guided our family through challenging times."</p>
+            </div>
+            
+            <div class="memorial-item">
+                <h3>Madam Akua Afriyie (1930-2018)</h3>
+                <p>Matriarch and preserver of family traditions.</p>
+                <p>"Her stories kept our history alive and her kindness touched all who knew her."</p>
+            </div>
+            
+            <div class="memorial-item">
+                <h3>Dr. Kwasi Owusu (1955-2020)</h3>
+                <p>Pioneering physician who established the first clinic in Adukrom.</p>
+                <p>"His dedication to healing improved countless lives in our community."</p>
+            </div> -->
+        </div>
+        
+        <!-- Gallery Page -->
+        <div id="gallery" class="page">
+            <h2>Family Gallery</h2>
+            <p>Browse through our collection of family photos spanning generations.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="gallery1.jpg" alt="Family Photo">
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery2.jpg" alt="Family Event">
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery3.jpg" alt="Family Reunion">
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery4.jpg" alt="Traditional Ceremony">
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery5.jpg" alt="Historical Photo">
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery6.jpg" alt="Building Project">
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery7.jpg" alt="Family Elders">
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery8.jpg" alt="Younger Generation">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Family Map Page -->
+        <div id="map" class="page">
+            <h2>Family Map</h2>
+            <p>Explore where our family members are located across Ghana and the world.</p>
+            
+            <div id="family-map">
+                <!-- Map will be embedded here -->
+                <p style="text-align: center; padding-top: 180px;">Family locations map will be displayed here</p>
+            </div>
+            
+            <h3>Family Branches</h3>
+            <ul>
+                <li>Adukrom Main Branch</li>
+                <li>Accra Branch</li>
+                <li>Kumasi Branch</li>
+                <li>Tamale Branch</li>
+                <li>International Members (USA, UK, Canada, Germany)</li>
+            </ul>
+        </div>
+        
+        <!-- Networking Page -->
+        <div id="networking" class="page">
+            <h2>Family Networking</h2>
+            <p>Connect with family members and explore professional opportunities within our network.</p>
+            
+            <h3>Professional Directory</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Profession</th>
+                        <th>Location</th>
+                        <th>Contact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Kwame Asante</td>
+                        <td>Architect</td>
+                        <td>Accra</td>
+                        <td>k.asante@email.com</td>
+                    </tr>
+                    <tr>
+                        <td>Ama Serwaa</td>
+                        <td>Medical Doctor</td>
+                        <td>Kumasi</td>
+                        <td>a.serwaa@email.com</td>
+                    </tr>
+                    <tr>
+                        <td>Kofi Mensah</td>
+                        <td>University Professor</td>
+                        <td>Legon</td>
+                        <td>k.mensah@email.com</td>
+                    </tr>
+                    <tr>
+                        <td>Akosua Adoma</td>
+                        <td>Business Owner</td>
+                        <td>Tema</td>
+                        <td>a.adoma@email.com</td>
+                    </tr>
+                    <tr>
+                        <td>Yaw Boateng</td>
+                        <td>Religious Leader</td>
+                        <td>Adukrom</td>
+                        <td>y.boateng@email.com</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Request Connection</h3>
+            <form>
+                <div class="form-group">
+                    <label for="net-name">Your Name</label>
+                    <input type="text" id="net-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="net-email">Your Email</label>
+                    <input type="email" id="net-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="net-profession">Your Profession</label>
+                    <input type="text" id="net-profession" required>
+                </div>
+                <div class="form-group">
+                    <label for="net-message">Connection Request</label>
+                    <textarea id="net-message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send Request</button>
+            </form>
+        </div>
+        
+        <!-- Business Page -->
+        <div id="business" class="page">
+            <h2>Family Businesses</h2>
+            <p>Support family-owned businesses and explore investment opportunities.</p>
+            
+            <h3>Featured Businesses</h3>
+            <div class="profile-grid">
+                <div class="profile-card">
+                    <img src="business1.jpg" alt="Business">
+                    <h3>Adoma Enterprises</h3>
+                    <p>Textiles and Clothing</p>
+                    <p>Located in Tema</p>
+                    <p>Contact: 0244-123456</p>
+                </div>
+                
+                <div class="profile-card">
+                    <img src="business2.jpg" alt="Business">
+                    <h3>Jamesville Farms</h3>
+                    <p>Agricultural Products</p>
+                    <p>Located in Adukrom</p>
+                    <p>Contact: 0200-987654</p>
+                </div>
+                
+                <div class="profile-card">
+                    <img src="business3.jpg" alt="Business">
+                    <h3>Serwaa Medical Center</h3>
+                    <p>Healthcare Services</p>
+                    <p>Located in Kumasi</p>
+                    <p>Contact: 0543-456789</p>
+                </div>
+            </div>
+            
+            <h3>Business Directory</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Business Name</th>
+                        <th>Type</th>
+                        <th>Owner</th>
+                        <th>Location</th>
+                        <th>Contact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Adoma Enterprises</td>
+                        <td>Textiles</td>
+                        <td>Akosua Adoma</td>
+                        <td>Tema</td>
+                        <td>0244-123456</td>
+                    </tr>
+                    <tr>
+                        <td>Jamesville Farms</td>
+                        <td>Agriculture</td>
+                        <td>Kwame Asante</td>
+                        <td>Adukrom</td>
+                        <td>0200-987654</td>
+                    </tr>
+                    <tr>
+                        <td>Serwaa Medical Center</td>
+                        <td>Healthcare</td>
+                        <td>Dr. Ama Serwaa</td>
+                        <td>Kumasi</td>
+                        <td>0543-456789</td>
+                    </tr>
+                    <tr>
+                        <td>Mensah Bookshop</td>
+                        <td>Retail</td>
+                        <td>Prof. Kofi Mensah</td>
+                        <td>Legon</td>
+                        <td>0302-112233</td>
+                    </tr>
+                    <tr>
+                        <td>Boateng Construction</td>
+                        <td>Construction</td>
+                        <td>Rev. Yaw Boateng</td>
+                        <td>Adukrom</td>
+                        <td>0277-445566</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Council of Elders Page -->
+        <div id="elders" class="page">
+            <h2>Council of Elders</h2>
+            <p>Meet the respected elders who provide guidance and wisdom to our family.</p>
+            
+            <div class="container1">
+                <h1>FAMILY GROUP REPRESENTATIVES</h1>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Group</th>
+                            <th>Contact Person</th>
+                            <th>Tel. No.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>The Akrofi Family</td>
+                            <td>Mr. Michael Ashong</td>
+                            <td>024 217 6214</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>The Obeng Kwadwo Family</td>
+                            <td>Mad. Janet Asare</td>
+                            <td>054 340 0964</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>The Johnson Osew Family</td>
+                            <td>Dr. David Opare</td>
+                            <td>020 816 8903</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>The Emma Adubea Family</td>
+                            <td>Rev. Ferdinand O. Otibu</td>
+                            <td>020 818 1313</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>The Rachel Adubea Family</td>
+                            <td>Mad. Joyce S. Ayisi</td>
+                            <td>050 156 6117</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>The Christiana Sika Family</td>
+                            <td>Mad. Esther Boateng</td>
+                            <td>054 403 9556</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>The Dora Ofori Family</td>
+                            <td>Mrs. Emilia Kwapong</td>
+                            <td>027 140 0700</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>The Jane Ansah Family</td>
+                            <td>Mr. Ebenezer Ansah</td>
+                            <td>024 432 2479</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>The Mercy Asare Family</td>
+                            <td>Mr. Kwame Yirenkyi</td>
+                            <td>024 568 1270</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>The Felicia Adu Family</td>
+                            <td>Mrs. Juliet S. Kono</td>
+                            <td>024 306 1336</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="note">
+                    <p>Note: Please contact the respective representatives for any family-related matters.</p>
+                </div>
+            </div>
+            
+            <h3>Council Responsibilities</h3>
+            <ul>
+                <li>Preserve family traditions and customs</li>
+                <li>Resolve family disputes</li>
+                <li>Provide guidance on important family decisions</li>
+                <li>Oversee family properties and assets</li>
+                <li>Ensure continuity of family values</li>
+            </ul>
+        </div>
+        
+        <!-- Management Committee Page -->
+        <div class="container">
+            <h1>MANAGEMENT COMMITTEE</h1>
+            
+            <div class="committee-section">
+                <h2>Members</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Contact Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Dr. David Opare</td>
+                            <td class="position">Chairman</td>
+                            <td>055 847 7896</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Ms. Joyce S. Ayisi (Mrs. Twum)</td>
+                            <td class="position">Secretary</td>
+                            <td>050 156 6117</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Mrs. Dora Owusu Asante-Annor</td>
+                            <td class="position">Treasurer</td>
+                            <td>020 818 7819</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Dr. Joseph Opare</td>
+                            <td>-</td>
+                            <td>050 652 9786</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Mr. James Opare</td>
+                            <td>-</td>
+                            <td>024 465 0111</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Mr. David Addo-Ashong</td>
+                            <td>-</td>
+                            <td>024 468 2154</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Mrs. Emilia Kwapong</td>
+                            <td>-</td>
+                            <td>057 768 3933</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Dr. Ansah Koi Larbi</td>
+                            <td>-</td>
+                            <td>024 501 3066</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Mr. Yaw Sakyi-Bekoe</td>
+                            <td>-</td>
+                            <td>024 436 8616</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Mr. Kwasi Damete-Yeboah</td>
+                            <td>-</td>
+                            <td>024 426 7341</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Mr. Kwame Yirenkyi Asare</td>
+                            <td>-</td>
+                            <td>024 568 1270</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Enoch Obeng</td>
+                            <td>-</td>
+                            <td>024 253 2553</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Fred Kwadwo Ofori</td>
+                            <td>-</td>
+                            <td>024 444 5131</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Prince Osei Nyarko</td>
+                            <td>-</td>
+                            <td>054 605 5004</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>Mrs. Rachel Fynn</td>
+                            <td>-</td>
+                            <td>020 285 0717</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="committee-section">
+                <h2>Advisors</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Name</th>
+                            <th>Contact Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mr. Ebenezer Kofi Ansah</td>
+                            <td>024 432 2479</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Mrs. Juliet S. Kono</td>
+                            <td>024 306 1336</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Mr. Alexander Kwaku Adu</td>
+                            <td>020 814 5201</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="note">
+                <p>For any committee-related matters, please contact the respective members or advisors.</p>
+            </div>
+        </div>
+        
+        <!-- Programs Page -->
+        <div id="programs" class="page">
+            <h2>Family Programs</h2>
+            <p>Upcoming and past events organized by the family.</p>
+            
+            <h3>Upcoming Programs</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Event</th>
+                        <th>Location</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>June 15, 2025</td>
+                        <td>Annual General Meeting</td>
+                        <td>Adukrom Community Center</td>
+                        <td>Review of family affairs and planning</td>
+                    </tr>
+                    <tr>
+                        <td>August 10, 2025</td>
+                        <td>Family Education Day</td>
+                        <td>Jamesville Family House</td>
+                        <td>Workshops on family history and values</td>
+                    </tr>
+                    <tr>
+                        <td>December 15-17, 2025</td>
+                        <td>Family Reunion</td>
+                        <td>Adukrom</td>
+                        <td>Annual gathering with cultural activities</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Past Programs</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Event</th>
+                        <th>Location</th>
+                        <th>Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>December 15-17, 2024</td>
+                        <td>Family Reunion</td>
+                        <td>Adukrom</td>
+                        <td>Successful gathering with 150 attendees</td>
+                    </tr>
+                    <tr>
+                        <td>July 20, 2024</td>
+                        <td>Building Project Launch</td>
+                        <td>Project Site</td>
+                        <td>Groundbreaking ceremony performed</td>
+                    </tr>
+                    <tr>
+                        <td>March 5, 2024</td>
+                        <td>Education Seminar</td>
+                        <td>Accra</td>
+                        <td>Career guidance for young members</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Donation Page -->
+        <div id="donation" class="page">
+            <h2>Support Our Family Projects</h2>
+            <p>Your contributions help us maintain our heritage and develop our community.</p>
+            
+            <h3>Current Fundraising Campaigns</h3>
+            <div class="profile-grid">
+                <div class="profile-card">
+                    <img src="building-project.jpg" alt="Project">
+                    <h3>Family House Project</h3>
+                    <p>Goal: GH₵500,000</p>
+                    <p>Raised: GH₵325,000 (65%)</p>
+                    <button>Donate Now</button>
+                </div>
+                
+                <div class="profile-card">
+                    <img src="education-fund.jpg" alt="Project">
+                    <h3>Education Fund</h3>
+                    <p>Goal: GH₵100,000</p>
+                    <p>Raised: GH₵45,000 (45%)</p>
+                    <button>Donate Now</button>
+                </div>
+                
+                <div class="profile-card">
+                    <img src="welfare-fund.jpg" alt="Project">
+                    <h3>Welfare Fund</h3>
+                    <p>Goal: GH₵50,000</p>
+                    <p>Raised: GH₵30,000 (60%)</p>
+                    <button>Donate Now</button>
+                </div>
+            </div>
+            
+            <h3>Make a Donation</h3>
+            <form>
+                <div class="form-group">
+                    <label for="donor-name">Your Name</label>
+                    <input type="text" id="donor-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="donor-email">Your Email</label>
+                    <input type="email" id="donor-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="donor-phone">Phone Number</label>
+                    <input type="tel" id="donor-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="donation-amount">Amount (GH₵)</label>
+                    <input type="number" id="donation-amount" required>
+                </div>
+                <div class="form-group">
+                    <label for="donation-purpose">Purpose</label>
+                    <select id="donation-purpose" required>
+                        <option value="">Select purpose</option>
+                        <option value="building">Family House Project</option>
+                        <option value="education">Education Fund</option>
+                        <option value="welfare">Welfare Fund</option>
+                        <option value="general">General Donation</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="donation-message">Message (Optional)</label>
+                    <textarea id="donation-message" rows="3"></textarea>
+                </div>
+                <button type="submit">Proceed to Payment</button>
+            </form>
+        </div>
+        
+        <!-- Sign Up Page -->
+        <div id="signup" class="page">
+            <h2>Join Our Family Network</h2>
+            <p>Register to become an official member of the Jamesville Family of Adukrom Akuapem.</p>
+            
+            <form>
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email Address</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-phone">Phone Number</label>
+                    <input type="tel" id="signup-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-dob">Date of Birth</label>
+                    <input type="date" id="signup-dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-address">Residential Address</label>
+                    <input type="text" id="signup-address" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-hometown">Hometown</label>
+                    <input type="text" id="signup-hometown" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-occupation">Occupation</label>
+                    <input type="text" id="signup-occupation" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-parents">Parents' Names</label>
+                    <input type="text" id="signup-parents" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-grandparents">Grandparents' Names</label>
+                    <input type="text" id="signup-grandparents">
+                </div>
+                <div class="form-group">
+                    <label for="signup-branch">Family Branch</label>
+                    <select id="signup-branch" required>
+                        <option value="">Select branch</option>
+                        <option value="adukrom">Adukrom Main Branch</option>
+                        <option value="accra">Accra Branch</option>
+                        <option value="kumasi">Kumasi Branch</option>
+                        <option value="tamale">Tamale Branch</option>
+                        <option value="international">International</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" required> I agree to the family constitution and bylaws
+                    </label>
+                </div>
+                <button type="submit">Submit Registration</button>
+            </form>
+        </div>
+        
+        <!-- Building Project Page -->
+        <div id="building" class="page">
+            <h2>Family Building Project</h2>
+            <p>Updates on our multipurpose family house construction in Adukrom.</p>
+            
+            <div class="profile-grid">
+                <div class="profile-card">
+                    <img src="building1.jpg" alt="Building Progress">
+                    <h3>Project Overview</h3>
+                    <p>3-story multipurpose family house with meeting halls, guest rooms, and museum</p>
+                </div>
+                
+                <div class="profile-card">
+                    <img src="building2.jpg" alt="Building Progress">
+                    <h3>Current Status</h3>
+                    <p>65% complete - Structure finished, now working on interiors</p>
+                </div>
+                
+                <div class="profile-card">
+                    <img src="building3.jpg" alt="Building Progress">
+                    <h3>Project Timeline</h3>
+                    <p>Started: July 2024</p>
+                    <p>Expected completion: December 2025</p>
+                </div>
+            </div>
+            
+            <h3>Project Details</h3>
+            <ul>
+                <li>Location: Jamesville Family Land, Adukrom</li>
+                <li>Total Cost: GH₵500,000</li>
+                <li>Amount Raised: GH₵325,000 (65%)</li>
+                <li>Project Manager: Arch. Kwabena Osei</li>
+                <li>Contractor: Asante Construction Ltd.</li>
+            </ul>
+            
+            <h3>Progress Photos</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="progress1.jpg" alt="Progress Photo">
+                </div>
+                <div class="gallery-item">
+                    <img src="progress2.jpg" alt="Progress Photo">
+                </div>
+                <div class="gallery-item">
+                    <img src="progress3.jpg" alt="Progress Photo">
+                </div>
+                <div class="gallery-item">
+                    <img src="progress4.jpg" alt="Progress Photo">
+                </div>
+            </div>
+            
+            <h3>How to Contribute</h3>
+            <p>You can support this project through:</p>
+            <ol>
+                <li>Cash donations (see Donation page)</li>
+                <li>Material donations (cement, roofing sheets, etc.)</li>
+                <li>Volunteer labor</li>
+                <li>Professional services (architectural, electrical, etc.)</li>
+            </ol>
+            
+            <p>Contact the Project Committee at building@jamesvillefamily.org or call 0244-112233 for more information.</p>
+        </div>
+        
+        <!-- Documentary Page -->
+        <div id="documentary" class="page">
+            <h2>Family Documentary</h2>
+            <div class="video-container" width="100%">
+                <!-- Video with autoplay, muted (required for autoplay in most browsers), and loop -->
+                <video autoplay muted loop controls>
+                    <source src="FAMILY OF JAMES KWADWO LARBI-22_compressed.mp4" type="video/mp4">
+                    <source src="your-video.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <div style="text-align: center; margin: 30px 0;">
+                <div style="background-color: #ddd; height: 400px; display: flex; justify-content: center; align-items: center; border-radius: 8px;">
+                    <p>Family documentary video will be embedded here</p>
+                </div>
+            </div>
+            
+            <h3>Documentary Chapters</h3>
+            <ol>
+                <li>Origins: The Jamesville Story (1800-1900)</li>
+                <li>Colonial Era and Family Adaptation (1900-1957)</li>
+                <li>Post-Independence Growth (1957-2000)</li>
+                <li>The Modern Family (2000-Present)</li>
+                <li>Preserving Our Legacy (Future Directions)</li>
+            </ol>
+            
+            <h3>Featured Family Members</h3>
+            <div class="profile-grid">
+                <div class="profile-card">
+                    <img src="featured1.jpg" alt="Family Member">
+                    <h3>Opanin Kwabena James</h3>
+                    <p>Family Founder</p>
+                </div>
+                
+                <div class="profile-card">
+                    <img src="featured2.jpg" alt="Family Member">
+                    <h3>Madam Akua Afriyie</h3>
+                    <p>Preserver of Traditions</p>
+                </div>
+                
+                <div class="profile-card">
+                    <img src="featured3.jpg" alt="Family Member">
+                    <h3>Dr. Kwasi Owusu</h3>
+                    <p>Community Health Pioneer</p>
+                </div>
+
+                <h1>Autoplaying Video Example</h1>
+    
+    
+
+    <p>Note: The video is set to autoplay (muted), loop, and show controls.</p>
+            </div>
+            
+            <h3>Share Your Story</h3>
+            <p>Do you have photos, documents, or stories that could contribute to our family history? Please contact our documentation team at history@jamesvillefamily.org.</p>
+        </div>
+        
+        <!-- Dues Calculator Page -->
+        <div id="dues" class="page">
+            <h2>Family Dues Calculator</h2>
+            <p>Calculate your annual family dues based on your membership category.</p>
+            
+            <form id="dues-form">
+                <div class="form-group">
+                    <label for="member-category">Membership Category</label>
+                    <select id="member-category" required>
+                        <option value="">Select category</option>
+                        <option value="elder">Elder (60+ years)</option>
+                        <option value="adult">Adult Member (25-59 years)</option>
+                        <option value="youth">Youth Member (18-24 years)</option>
+                        <option value="student">Student (Full-time)</option>
+                        <option value="overseas">Overseas Member</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="employment-status">Employment Status</label>
+                    <select id="employment-status" required>
+                        <option value="">Select status</option>
+                        <option value="employed">Employed</option>
+                        <option value="self-employed">Self-Employed</option>
+                        <option value="unemployed">Unemployed</option>
+                        <option value="retired">Retired</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="additional-contribution">Additional Voluntary Contribution (GH₵)</label>
+                    <input type="number" id="additional-contribution" value="0" min="0">
+                </div>
+                
+                <button type="button" onclick="calculateDues()">Calculate Dues</button>
+            </form>
+            
+            <div id="dues-result" style="margin-top: 30px; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: none;">
+                <h3>Your Annual Dues</h3>
+                <p id="base-dues">Base Dues: GH₵0.00</p>
+                <p id="voluntary-contribution">Voluntary Contribution: GH₵0.00</p>
+                <p id="total-dues" style="font-weight: bold; font-size: 1.2rem;">Total Annual Dues: GH₵0.00</p>
+                <p id="payment-instructions">Payment instructions will appear here</p>
+                
+                <button style="margin-top: 15px;">Proceed to Payment</button>
+            </div>
+            
+            <h3 style="margin-top: 30px;">Dues Structure</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Base Amount (GH₵)</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Elder (60+ years)</td>
+                        <td>100</td>
+                        <td>Discounted rate for senior members</td>
+                    </tr>
+                    <tr>
+                        <td>Adult Member (25-59 years)</td>
+                        <td>200</td>
+                        <td>Standard rate for working adults</td>
+                    </tr>
+                    <tr>
+                        <td>Youth Member (18-24 years)</td>
+                        <td>50</td>
+                        <td>Discounted rate for young adults</td>
+                    </tr>
+                    <tr>
+                        <td>Student (Full-time)</td>
+                        <td>30</td>
+                        <td>Special rate for students</td>
+                    </tr>
+                    <tr>
+                        <td>Overseas Member</td>
+                        <td>300</td>
+                        <td>Equivalent to $50 at current rates</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Payment Methods</h3>
+            <ul>
+                <li>Mobile Money: 0244-112233 (Jamesville Family Account)</li>
+                <li>Bank Transfer: Ghana Commercial Bank, Adukrom Branch, Account #1234567890</li>
+                <li>Cash Payment: To any member of the Management Committee</li>
+            </ul>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Jamesville Family of Adukrom Akuapem. All rights reserved.</p>
+            <p>Contact: info@jamesvillefamily.org | Phone: +233 244 112233</p>
+            <div style="margin-top: 15px;">
+                <a href="#" style="color: white; margin: 0 10px;">Facebook</a>
+                <a href="#" style="color: white; margin: 0 10px;">Twitter</a>
+                <a href="#" style="color: white; margin: 0 10px;">Instagram</a>
+                <a href="#" style="color: white; margin: 0 10px;">WhatsApp Group</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Show selected page and hide others
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+        }
+        
+        // Dues calculator function
+        function calculateDues() {
+            const category = document.getElementById('member-category').value;
+            const employment = document.getElementById('employment-status').value;
+            const additional = parseFloat(document.getElementById('additional-contribution').value) || 0;
+            
+            if (!category || !employment) {
+                alert('Please select both membership category and employment status');
+                return;
+            }
+            
+            let baseDues = 0;
+            
+            // Determine base dues based on category
+            switch(category) {
+                case 'elder':
+                    baseDues = 100;
+                    break;
+                case 'adult':
+                    baseDues = 200;
+                    // Additional for employed adults
+                    if (employment === 'employed' || employment === 'self-employed') {
+                        baseDues += 50;
+                    }
+                    break;
+                case 'youth':
+                    baseDues = 50;
+                    break;
+                case 'student':
+                    baseDues = 30;
+                    break;
+                case 'overseas':
+                    baseDues = 300;
+                    break;
+            }
+            
+            // Display results
+            document.getElementById('base-dues').textContent = `Base Dues: GH₵${baseDues.toFixed(2)}`;
+            document.getElementById('voluntary-contribution').textContent = `Voluntary Contribution: GH₵${additional.toFixed(2)}`;
+            document.getElementById('total-dues').textContent = `Total Annual Dues: GH₵${(baseDues + additional).toFixed(2)}`;
+            
+            // Payment instructions
+            let instructions = "Please pay by: ";
+            if (category === 'overseas') {
+                instructions += "Bank transfer or PayPal to family overseas account";
+            } else {
+                instructions += "Mobile Money (0244-112233) or direct bank deposit";
+            }
+            
+            document.getElementById('payment-instructions').textContent = instructions;
+            
+            // Show results
+            document.getElementById('dues-result').style.display = 'block';
+        }
+        
+        // Initialize with home page
+        document.addEventListener('DOMContentLoaded', function() {
+            showPage('home');
+        });
+
+        document.getElementById("aboutForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+            const email = document.getElementById("email").value;
+            const occupation = document.getElementById("occupation").value;
+            const country = document.getElementById("country").value;
+            const interests = document.getElementById("interests").value;
+            const bio = document.getElementById("bio").value;
+            
+            // Display the information
+            let output = `
+                <p><strong>Name:</strong> ${name}</p>
+                ${age ? `<p><strong>Age:</strong> ${age}</p>` : ''}
+                ${email ? `<p><strong>Email:</strong> ${email}</p>` : ''}
+                ${occupation ? `<p><strong>Occupation:</strong> ${occupation}</p>` : ''}
+                ${country ? `<p><strong>Country:</strong> ${country}</p>` : ''}
+                ${interests ? `<p><strong>Interests:</strong> ${interests}</p>` : ''}
+                ${bio ? `<p><strong>About You:</strong> ${bio}</p>` : ''}
+            `;
+            
+            document.getElementById("userInfo").innerHTML = output;
+            document.getElementById("output").style.display = "block";
+            
+            // Scroll to the output
+            document.getElementById("output").scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
